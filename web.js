@@ -9,7 +9,7 @@ data = fs.readFileSync( infile );
 console.log("Script: " + __filename + "\nRead: " + data + "From: " + infile);
 
 app.get('/', function(request, response) {
-  response.send(data);
+    response.send(data.toString());
 });
 
 var port = process.env.PORT || 5000;
